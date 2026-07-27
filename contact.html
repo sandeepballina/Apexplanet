@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Kiln &amp; Co.</title>
+<meta name="description" content="Get in touch with Kiln & Co., find studio hours, directions, and send us a message." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a href="index.html" class="logo">
+      <svg class="logo__mark" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="7.5"/></svg>
+      Kiln &amp; Co.
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero--page">
+    <div class="wrap hero__inner">
+      <div>
+        <p class="eyebrow eyebrow--light">Get in touch</p>
+        <h1 class="hero__title">Come by, or<br /><em>write ahead.</em></h1>
+        <p class="hero__lede">Studio tours are welcome any time we're open. For classes, commissions, or events, send a message and we'll reply within two business days.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap contact-layout">
+
+      <div>
+        <p class="eyebrow">Send a message</p>
+        <h2 class="section__title">Tell us what you're after</h2>
+        <form id="contact-form" class="form-grid" style="margin-top:1.6rem;" novalidate>
+
+          <div class="field">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first-name" autocomplete="given-name" required />
+          </div>
+
+          <div class="field">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last-name" autocomplete="family-name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-0110" />
+          </div>
+
+          <div class="field field--full">
+            <label for="reason">I'm interested in</label>
+            <select id="reason" name="reason" required>
+              <option value="">Select one</option>
+              <option value="beginner-course">Beginner wheel course</option>
+              <option value="workshop">Hand-building workshop</option>
+              <option value="membership">Studio membership</option>
+              <option value="private-event">Private event</option>
+              <option value="commission">Custom commission</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="field field--full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell us a bit about what you're looking for..."></textarea>
+          </div>
+
+          <div class="checkbox-field">
+            <input type="checkbox" id="newsletter" name="newsletter" />
+            <label for="newsletter">Keep me posted about new class openings and studio events.</label>
+          </div>
+
+          <div class="field field--full">
+            <button type="submit" class="btn btn--primary">Send message</button>
+            <p id="form-status" class="field-hint" role="status" hidden style="margin-top:0.9rem;"></p>
+          </div>
+
+        </form>
+      </div>
+
+      <aside>
+        <p class="eyebrow">Studio info</p>
+        <h2 class="section__title" style="font-size:1.5rem;">Visit us</h2>
+        <ul class="info-list" style="margin-top:1.4rem;">
+          <li>
+            <div class="label">Address</div>
+            <div class="value">418 Foundry Lane, Unit 3<br />Riverside Arts District</div>
+          </li>
+          <li>
+            <div class="label">Hours</div>
+            <div class="value">Tue–Fri 10am–8pm<br />Sat–Sun 9am–5pm<br />Closed Mondays</div>
+          </li>
+          <li>
+            <div class="label">Phone</div>
+            <div class="value"><a href="tel:+15555550110">(555) 555-0110</a></div>
+          </li>
+          <li>
+            <div class="label">Email</div>
+            <div class="value"><a href="mailto:hello@kilnandco.studio">hello@kilnandco.studio</a></div>
+          </li>
+        </ul>
+
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Riverside%20Arts%20District&output=embed"
+            title="Map showing the Kiln & Co. studio location"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <section class="section section--ink">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow eyebrow--light">Inside the studio</p>
+        <h2 class="section__title">A look around before you visit</h2>
+      </div>
+      <div class="gallery">
+        <figure class="gallery__item">
+          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#2b2925"/><rect x="20" y="150" width="160" height="14" fill="#8c8577"/><circle cx="60" cy="120" r="30" fill="none" stroke="#c97a44" stroke-width="2"/><circle cx="140" cy="100" r="22" fill="none" stroke="#7fa79a" stroke-width="2"/></svg>
+          <figcaption>Wheel Bay</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#33302b"/><rect x="30" y="40" width="140" height="18" fill="#3f6259"/><rect x="30" y="80" width="140" height="18" fill="#a8531f"/><rect x="30" y="120" width="140" height="18" fill="#7fa79a"/></svg>
+          <figcaption>Glaze Shelf</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#2b2925"/><rect x="55" y="70" width="90" height="120" rx="4" fill="none" stroke="#ede7dd" stroke-width="2"/><rect x="70" y="90" width="60" height="10" fill="#ede7dd"/></svg>
+          <figcaption>Kiln Room</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#33302b"/><circle cx="100" cy="110" r="45" fill="none" stroke="#c97a44" stroke-width="2"/><path d="M60 180 L140 180 L130 220 L70 220 Z" fill="#7fa79a"/></svg>
+          <figcaption>Front Studio</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <svg class="logo__mark" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="7.5"/></svg>
+        Kiln &amp; Co.
+      </a>
+      <p>A working ceramics studio and teaching space, open Tuesday through Sunday.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Classes &amp; Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="contact.html">Studio hours</a></li>
+        <li><a href="contact.html">Directions</a></li>
+        <li><a href="mailto:hello@kilnandco.studio">hello@kilnandco.studio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Kiln &amp; Co. Studio. All rights reserved.</span>
+    <span>Built for Task 1 — HTML5 &amp; CSS3</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
