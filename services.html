@@ -18,9 +18,15 @@
       <svg class="logo__mark" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="7.5"/></svg>
       Kiln &amp; Co.
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
-      <span></span>
-    </button>
+    <div class="header-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span></span>
+      </button>
+    </div>
     <nav class="primary-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -216,9 +222,13 @@
   </div>
   <div class="wrap footer-bottom">
     <span>© 2026 Kiln &amp; Co. Studio. All rights reserved.</span>
-    <span>Built for Task 1 — HTML5 &amp; CSS3</span>
+    <span>Built for Task 1 &amp; 2 — HTML5, CSS3 &amp; JavaScript</span>
   </div>
 </footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 
 <script src="assets/js/main.js"></script>
 </body>

@@ -18,9 +18,15 @@
       <svg class="logo__mark" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="7.5"/></svg>
       Kiln &amp; Co.
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
-      <span></span>
-    </button>
+    <div class="header-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span></span>
+      </button>
+    </div>
     <nav class="primary-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
@@ -43,7 +49,8 @@
         <p class="hero__lede">Kiln &amp; Co. teaches wheel-throwing and hand-building to beginners and long-time makers alike, and fires custom commissions for homes, restaurants, and studios across the city.</p>
         <div class="hero__actions">
           <a href="services.html" class="btn btn--primary">Book a class</a>
-          <a href="about.html" class="btn btn--ghost">Meet the studio</a>
+          <a href="#gallery" class="btn btn--ghost">See recent work ↓</a>
+          <button type="button" class="btn btn--ghost" data-modal-open="quick-enquiry-modal">Quick enquiry</button>
         </div>
       </div>
       <div class="hero__wheel" aria-hidden="true">
@@ -87,29 +94,61 @@
     </div>
   </section>
 
-  <section class="section section--ink">
+  <section class="section section--ink" id="gallery">
     <div class="wrap">
       <div class="section__head">
         <p class="eyebrow eyebrow--light">From the gallery</p>
         <h2 class="section__title">Recent work off the shelf</h2>
+        <p class="section__lede">A running rotation of pieces fresh out of the kiln. Browse through, or come see them in person.</p>
       </div>
-      <div class="gallery">
-        <figure class="gallery__item">
-          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#33302b"/><path d="M75 60 Q60 130 75 190 Q100 210 125 190 Q140 130 125 60 Q100 45 75 60 Z" fill="#7fa79a"/></svg>
-          <figcaption>Glaze Vase — Moss</figcaption>
-        </figure>
-        <figure class="gallery__item">
-          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#2b2925"/><path d="M65 80 Q65 200 100 205 Q135 200 135 80 Q100 55 65 80 Z" fill="#c97a44"/></svg>
-          <figcaption>Table Bowl — Ochre</figcaption>
-        </figure>
-        <figure class="gallery__item">
-          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#33302b"/><path d="M85 55 L115 55 L125 100 L120 190 Q100 210 80 190 L75 100 Z" fill="#ede7dd"/></svg>
-          <figcaption>Bottle Vessel — Bone</figcaption>
-        </figure>
-        <figure class="gallery__item">
-          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#2b2925"/><ellipse cx="100" cy="150" rx="55" ry="35" fill="#3f6259"/><rect x="70" y="90" width="60" height="45" fill="#3f6259"/></svg>
-          <figcaption>Planter — Deep Glaze</figcaption>
-        </figure>
+
+      <div class="carousel" aria-label="Recent studio work" aria-roledescription="carousel">
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+
+            <div class="carousel__slide">
+              <svg viewBox="0 0 800 350" preserveAspectRatio="xMidYMid slice"><rect width="800" height="350" fill="#33302b"/><path d="M340 90 Q300 220 340 320 Q400 355 460 320 Q500 220 460 90 Q400 60 340 90 Z" fill="#7fa79a"/></svg>
+              <div class="carousel__caption">
+                <h3>Glaze Vase — Moss</h3>
+                <p>Stoneware, reduction-fired, deep matte glaze.</p>
+              </div>
+            </div>
+
+            <div class="carousel__slide">
+              <svg viewBox="0 0 800 350" preserveAspectRatio="xMidYMid slice"><rect width="800" height="350" fill="#2b2925"/><path d="M300 140 Q300 320 400 330 Q500 320 500 140 Q400 95 300 140 Z" fill="#c97a44"/></svg>
+              <div class="carousel__caption">
+                <h3>Table Bowl — Ochre</h3>
+                <p>Wide serving bowl, wheel-thrown in a single piece.</p>
+              </div>
+            </div>
+
+            <div class="carousel__slide">
+              <svg viewBox="0 0 800 350" preserveAspectRatio="xMidYMid slice"><rect width="800" height="350" fill="#33302b"/><path d="M350 85 L450 85 L470 170 L455 320 Q400 355 345 320 L330 170 Z" fill="#ede7dd"/></svg>
+              <div class="carousel__caption">
+                <h3>Bottle Vessel — Bone</h3>
+                <p>Narrow-necked bottle, unglazed body with a satin interior.</p>
+              </div>
+            </div>
+
+            <div class="carousel__slide">
+              <svg viewBox="0 0 800 350" preserveAspectRatio="xMidYMid slice"><rect width="800" height="350" fill="#2b2925"/><ellipse cx="400" cy="250" rx="140" ry="65" fill="#3f6259"/><rect x="320" y="120" width="160" height="120" fill="#3f6259"/></svg>
+              <div class="carousel__caption">
+                <h3>Planter — Deep Glaze</h3>
+                <p>Drainage-ready planter in our house glaze-green.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous slide">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="carousel__arrow carousel__arrow--next" aria-label="Next slide">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <div class="carousel__dots"></div>
       </div>
     </div>
   </section>
@@ -143,6 +182,37 @@
 
 </main>
 
+<div class="modal-overlay" id="quick-enquiry-modal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="quick-enquiry-title">
+    <button type="button" class="modal__close" data-modal-close aria-label="Close dialog">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <h3 id="quick-enquiry-title">Quick enquiry</h3>
+    <p>Tell us what you're after and we'll get back to you within two business days.</p>
+    <form class="validate-form" novalidate>
+      <div class="field">
+        <label for="qe-name">Name</label>
+        <input type="text" id="qe-name" name="name" required />
+        <span class="field__error"></span>
+      </div>
+      <div class="field">
+        <label for="qe-email">Email</label>
+        <input type="email" id="qe-email" name="email" required />
+        <span class="field__error"></span>
+      </div>
+      <div class="field">
+        <label for="qe-message">Message</label>
+        <textarea id="qe-message" name="message" required placeholder="What are you hoping to make or learn?"></textarea>
+        <span class="field__error"></span>
+      </div>
+      <div class="field">
+        <button type="submit" class="btn btn--primary">Send enquiry</button>
+        <p class="field-hint" role="status" hidden style="margin-top:0.8rem;"></p>
+      </div>
+    </form>
+  </div>
+</div>
+
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
@@ -171,9 +241,13 @@
   </div>
   <div class="wrap footer-bottom">
     <span>© 2026 Kiln &amp; Co. Studio. All rights reserved.</span>
-    <span>Built for Task 1 — HTML5 &amp; CSS3</span>
+    <span>Built for Task 1 &amp; 2 — HTML5, CSS3 &amp; JavaScript</span>
   </div>
 </footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 
 <script src="assets/js/main.js"></script>
 </body>
