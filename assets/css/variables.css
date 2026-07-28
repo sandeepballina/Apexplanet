@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Variables, Resets & Base Styles - Kiln & Co. Design System
+   ========================================================================== */
+
+:root {
+  --ink: #211f1d;
+  --ink-soft: #33302b;
+  --ink-line: rgba(237, 231, 221, 0.14);
+  --bone: #ede7dd;
+  --bone-dim: #e2dbcc;
+  --paper: #faf7f0;
+  --glaze: #3f6259;
+  --glaze-light: #7fa79a;
+  --glaze-dim: #eaf0ee;
+  --ember: #a8531f;
+  --ember-light: #c97a44;
+  --muted: #8c8577;
+  --muted-on-dark: #b6afa1;
+  --cream: #ede7dd;
+  --text: var(--ink);
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label: "Space Mono", "Courier New", monospace;
+
+  --max-w: 1160px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --radius: 2px;
+}
+
+html[data-theme="dark"] {
+  --bone: #1c1a17;
+  --bone-dim: #34302a;
+  --paper: #242119;
+  --muted: #a79f8f;
+  --text: #ede7dd;
+  --glaze-dim: rgba(127, 167, 154, 0.14);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bone);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+
+.eyebrow--light {
+  color: var(--ember-light);
+}
+
+[id] {
+  scroll-margin-top: 90px;
+}
