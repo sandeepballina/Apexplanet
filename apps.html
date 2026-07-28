@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Studio Apps — Weather &amp; Todo — Kiln &amp; Co.</title>
+<meta name="description" content="A weather lookup for studio conditions and a todo list for tracking work at the wheel, built with the Fetch API and localStorage." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a href="index.html" class="logo">
+      <svg class="logo__mark" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="7.5"/></svg>
+      Kiln &amp; Co.
+    </a>
+    <div class="header-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span></span>
+      </button>
+    </div>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="apps.html" aria-current="page">Apps</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero--page">
+    <div class="wrap hero__inner">
+      <div>
+        <p class="eyebrow eyebrow--light">Studio apps</p>
+        <h1 class="hero__title">Two small tools<br /><em>for the studio.</em></h1>
+        <p class="hero__lede">A weather lookup for planning glaze days (humidity matters more than you'd think), and a todo list for tracking work at the wheel. Both save your data between visits.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="weather">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow">App 01</p>
+        <h2 class="section__title">Studio weather lookup</h2>
+        <p class="section__lede">Pulled live from the OpenWeatherMap API. Search any city — useful for checking conditions before a glaze-drying day, or just out of habit.</p>
+      </div>
+
+      <div class="app-card">
+
+        <form id="weather-form" class="app-card__row weather-search" novalidate>
+          <div class="field field--full">
+            <label for="weather-city">City</label>
+            <input type="text" id="weather-city" name="city" placeholder="e.g. Hyderabad" required />
+            <span class="field__error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary">Search</button>
+        </form>
+
+        <div id="weather-result" class="weather-result" hidden>
+          <div class="weather-result__main">
+            <img id="weather-icon" class="weather-result__icon" src="" alt="" />
+            <div>
+              <div class="weather-result__temp" id="weather-temp">--°</div>
+              <div class="weather-result__place" id="weather-place">--</div>
+              <div class="weather-result__desc" id="weather-desc">--</div>
+            </div>
+          </div>
+          <div class="weather-result__stats">
+            <div>
+              <span class="weather-result__label">Humidity</span>
+              <span id="weather-humidity">--</span>
+            </div>
+            <div>
+              <span class="weather-result__label">Wind speed</span>
+              <span id="weather-wind">--</span>
+            </div>
+            <div>
+              <span class="weather-result__label">Feels like</span>
+              <span id="weather-feels">--</span>
+            </div>
+          </div>
+        </div>
+
+        <p id="weather-status" class="weather-status" role="status"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink" id="todo">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow eyebrow--light">App 02</p>
+        <h2 class="section__title">Studio todo list</h2>
+        <p class="section__lede">Track glazing, trimming, and firing tasks. Everything is saved to your browser automatically, so your list is still here next time you visit.</p>
+      </div>
+
+      <div class="app-card app-card--dark">
+
+        <form id="todo-form" class="todo-add" novalidate>
+          <div class="field field--full">
+            <label for="todo-input">New task</label>
+            <input type="text" id="todo-input" placeholder="e.g. Trim the six bowls from Tuesday" required />
+            <span class="field__error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary">Add task</button>
+        </form>
+
+        <div class="todo-filters" role="tablist" aria-label="Filter tasks">
+          <button type="button" class="todo-filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="todo-filter" data-filter="active" role="tab" aria-selected="false">Active</button>
+          <button type="button" class="todo-filter" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+        </div>
+
+        <ul id="todo-list" class="todo-list"></ul>
+
+        <p id="todo-empty" class="todo-empty">No tasks yet — add your first one above.</p>
+
+        <div class="todo-footer">
+          <span id="todo-count">0 tasks</span>
+          <button type="button" id="todo-clear-completed" class="todo-clear">Clear completed</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <svg class="logo__mark" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="7.5"/></svg>
+        Kiln &amp; Co.
+      </a>
+      <p>A working ceramics studio and teaching space, open Tuesday through Sunday.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Classes &amp; Services</a></li>
+        <li><a href="apps.html">Weather &amp; Todo App</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="contact.html">Studio hours</a></li>
+        <li><a href="contact.html">Directions</a></li>
+        <li><a href="mailto:hello@kilnandco.studio">hello@kilnandco.studio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Kiln &amp; Co. Studio. All rights reserved.</span>
+    <span>Built for Task 1, 2 &amp; 3 — HTML5, CSS3, JavaScript &amp; APIs</span>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
