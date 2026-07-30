@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Artisan Shop — Kiln &amp; Co. Ceramics</title>
+<meta name="description" content="Shop hand-thrown stoneware mugs, handcrafted ceramic dinnerware, botanical planters, and studio pottery tools from Kiln & Co." />
+<meta name="keywords" content="buy pottery online, artisan ceramics, stoneware mugs, ceramic vases, handmade ceramic plates, pottery studio shop" />
+<meta name="author" content="Kiln &amp; Co. Studio" />
+<meta name="robots" content="index, follow" />
+<!-- Open Graph / Social Media Meta Tags -->
+<meta property="og:title" content="Artisan Shop — Kiln &amp; Co. Ceramics" />
+<meta property="og:description" content="Shop hand-thrown stoneware mugs, handcrafted ceramic dinnerware, botanical planters, and studio pottery tools." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kilnandco.studio/shop.html" />
+<meta property="og:image" content="assets/favicon.svg" />
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Artisan Shop — Kiln &amp; Co. Ceramics" />
+<meta name="twitter:description" content="Shop hand-thrown stoneware mugs, handcrafted ceramic dinnerware, botanical planters, and studio pottery tools." />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a href="index.html" class="logo">
+      <svg class="logo__mark" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="7.5"/></svg>
+      Kiln &amp; Co.
+    </a>
+    <div class="header-actions">
+      <button class="cart-toggle-btn" id="cart-toggle-btn" aria-label="View Shopping Cart" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-badge" id="cart-badge-count">0</span>
+      </button>
+      <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span></span>
+      </button>
+    </div>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="shop.html" aria-current="page">Shop</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="shop-hero">
+    <div class="wrap">
+      <span class="shop-hero__badge">Task 5 Capstone Store</span>
+      <h1>Handcrafted Studio Pottery</h1>
+      <p>Each piece is individually wheel-thrown or hand-built in our Portland studio using high-fire stoneware and custom studio glazes.</p>
+    </div>
+  </section>
+
+  <section class="shop-toolbar">
+    <div class="wrap shop-toolbar__inner">
+      <div class="shop-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" id="shop-search-input" placeholder="Search mugs, vases, plates..." aria-label="Search ceramics catalog">
+      </div>
+
+      <div class="shop-categories" id="shop-categories" role="tablist" aria-label="Product categories">
+        <button type="button" class="cat-btn is-active" data-category="all" role="tab">All Pieces</button>
+        <button type="button" class="cat-btn" data-category="drinkware" role="tab">Drinkware</button>
+        <button type="button" class="cat-btn" data-category="dinnerware" role="tab">Dinnerware</button>
+        <button type="button" class="cat-btn" data-category="vases" role="tab">Vases &amp; Planters</button>
+        <button type="button" class="cat-btn" data-category="supplies" role="tab">Studio Tools</button>
+      </div>
+
+      <div class="shop-sort">
+        <label for="shop-sort-select" class="visually-hidden">Sort catalog</label>
+        <select id="shop-sort-select">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Highest Rated</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="product-grid" id="shop-product-grid">
+      <!-- Product cards dynamically populated by assets/js/shop.js -->
+    </div>
+  </section>
+
+  <!-- Craftsmanship Banner -->
+  <section class="section section--accent">
+    <div class="wrap" style="text-align: center; max-width: 800px;">
+      <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">Studio Quality &amp; Lifetime Guarantee</h2>
+      <p style="color: var(--muted-on-dark); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+        All Kiln &amp; Co. stoneware is fired to Cone 6 (2,232°F) ensuring non-porous vitreous durability. Safe for daily use in microwave and dishwasher.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+        <div>
+          <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--ember-light);">2,232°F</div>
+          <div style="font-size: 0.85rem; color: var(--muted-on-dark);">High Fire Cone 6</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--ember-light);">100%</div>
+          <div style="font-size: 0.85rem; color: var(--muted-on-dark);">Food &amp; Lead Safe</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--ember-light);">Free Shipping</div>
+          <div style="font-size: 0.85rem; color: var(--muted-on-dark);">On orders over $75</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <div class="logo logo--footer">
+        <svg class="logo__mark" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="7.5"/></svg>
+        Kiln &amp; Co.
+      </div>
+      <p class="footer-desc">A working ceramics studio, workshop space, and artisan store in Southeast Portland.</p>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Classes &amp; Services</a></li>
+        <li><a href="shop.html">Artisan Shop</a></li>
+        <li><a href="apps.html">Weather &amp; Todo App</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="contact.html">Studio hours</a></li>
+        <li><a href="contact.html">Directions</a></li>
+        <li><a href="mailto:hello@kilnandco.studio">hello@kilnandco.studio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Kiln &amp; Co. Studio. All rights reserved.</span>
+    <span>Built for Task 1, 2, 3, 4 &amp; 5 — HTML5, CSS3, JavaScript, APIs, E-Commerce &amp; Performance SEO</span>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/shop.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

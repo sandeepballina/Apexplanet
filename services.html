@@ -33,6 +33,14 @@
       Kiln &amp; Co.
     </a>
     <div class="header-actions">
+      <button class="cart-toggle-btn" id="cart-toggle-btn" aria-label="View Shopping Cart" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-badge" id="cart-badge-count">0</span>
+      </button>
       <button class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
         <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
@@ -46,6 +54,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="apps.html">Apps</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -223,6 +232,7 @@
       <ul>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Classes &amp; Services</a></li>
+        <li><a href="shop.html">Artisan Shop</a></li>
         <li><a href="apps.html">Weather &amp; Todo App</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -238,7 +248,7 @@
   </div>
   <div class="wrap footer-bottom">
     <span>© 2026 Kiln &amp; Co. Studio. All rights reserved.</span>
-    <span>Built for Task 1, 2, 3 &amp; 4 — HTML5, CSS3, JavaScript, APIs &amp; Performance SEO</span>
+    <span>Built for Task 1, 2, 3, 4 &amp; 5 — HTML5, CSS3, JavaScript, APIs, E-Commerce &amp; Performance SEO</span>
   </div>
 </footer>
 
@@ -249,6 +259,7 @@
 <script src="assets/js/utils.js"></script>
 <script src="assets/js/ui.js"></script>
 <script src="assets/js/api.js"></script>
+<script src="assets/js/shop.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
